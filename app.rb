@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/callback' do
-  if params["hub.verify_token"] != 'hogehoge'
+  if params["hub.verify_token"] != 'hogehoge' 
     return 'Error, wrong validation token'
   end
   params["hub.challenge"]
